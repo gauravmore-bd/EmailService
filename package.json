@@ -1,0 +1,19 @@
+{
+    "name": "emailservice",
+    "version": "1.0.0",
+    "description": "a simple email service provider app",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "start": "node src/index.js",
+        "dev": "nodemon src/index.js"
+    },
+    "author": "gaurav more",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^5.1.0"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0"
+    }
+}
