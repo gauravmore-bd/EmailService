@@ -1,6 +1,7 @@
 const EmailService = require('./EmailService');
 const MockProvider1 = require('./providers/MockProvider1');
 const MockProvider2 = require('./providers/MockProvider2');
+app.use(express.json());
 
 const service = new EmailService([
     new MockProvider1(),
@@ -11,7 +12,6 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.use(express.json());
 
 app.post('/send-email', async(req, res) => {
     const { to, subject, body, idempotencyKey } = req.body;
