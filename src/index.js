@@ -8,6 +8,12 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.json({
+        message: "This project was submitted for an interview assignment. Contact gauravmore33444@gmail.com for access or questions."
+    });
+});
+
 const service = new EmailService([
     new MockProvider1(),
     new MockProvider2()
@@ -25,11 +31,17 @@ app.post('/send-email', async(req, res) => {
 });
 
 app.get("/status/:id", (req, res) => {
-    const status = service.getStatus(req.params.id); // ✅ FIXED
+    const status = service.getStatus(req.params.id);
     if (!status) {
         return res.status(404).json({ error: "Idempotency key not found" });
     }
     res.json(status);
+});
+
+app.use((req, res) => {
+    res.status(404).json({
+        error: "Route not found. Please refer to the documentation or contact for support."
+    });
 });
 
 app.listen(port, () => {

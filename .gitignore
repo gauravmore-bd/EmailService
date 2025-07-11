@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+logs/
+
+# Environment variables (for future use)
+.env
+.env.*
+
+# Jest test coverage and cache
+coverage/
+.jest/
+.jest-cache/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor configs
+.vscode/
+*.swp
+*.tmp

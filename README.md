@@ -57,6 +57,8 @@ npm run dev
 # Server runs at http://localhost:3000
 
 ```
+---
+
 📮 API Endpoints
 POST /send-email
 Send a new email.
@@ -79,6 +81,7 @@ Response:
 }
 
 ```
+---
 
 GET /status/:idempotencyKey
 Get status of an email send attempt.
@@ -98,10 +101,14 @@ Response:
   "durationMs": 4500
 }
 ```
+---
+
 ### ✅ Running Tests
 ```bash
 npm test
 ```
+---
+
 ### ✔ All critical features are covered:
 
 - Success with working provider
@@ -109,6 +116,8 @@ npm test
 - Idempotency blocking
 - Rate limiting
 - Status tracking
+
+---
 
 ### ✅ Assumptions
 - Email sending is mocked (no real SMTP/API used)
@@ -121,6 +130,8 @@ npm test
 
 - Status is kept in memory for simplicity
 
+---
+
 ### ✨ Bonus Features (Optional Enhancements)
 - Circuit breaker logic (disable failing provider)
 
@@ -130,6 +141,25 @@ npm test
 
 - Dashboard or metrics API
 
+---
+
+## ☁️ Deployment Info
+This project is deployed on Render.
+```bash
+🔗 Live API URL: https://emailservice-iqnb.onrender.com
+```
+- The API is hosted on Render’s free tier and may sleep after 15 minutes of inactivity.
+- Once visited, it may take ~30 seconds to wake up.
+- The API will remain live during the interview process.
+- Afterward, it may return a static message like:
+
+```bash
+json
+{
+  "message": "This project was submitted for an interview assignment. Contact me for access."
+}
+```
+---
 ## 👤 Author
 
 **Gaurav More**  
@@ -139,3 +169,4 @@ JavaScript Backend Developer
 - [LinkedIn](https://www.linkedin.com/in/gauravmore12)
 - [GitHub](https://github.com/gauravmore-bd)
 - [Email](mailto:gauravmore33444@gmail.com)
+---
